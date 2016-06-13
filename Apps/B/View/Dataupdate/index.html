@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Anonymous" />
+    <meta name="keywords" content="众惠 互助 平台" />
+    <meta name="description" content="欢迎来到众惠互助平台！"/>
+    <meta property="og:title" content="众惠互助平台"/>
+    <meta property="og:description" content="欢迎来到众惠互助平台！"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+    <title>资料修改 - 众惠互助平台</title>
+
+    <link href="__ADMINCSS__/style.css" rel="stylesheet">
+    <link href="__ADMINCSS__/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="__ADMINJS__/html5shiv.js"></script>
+    <script src="__ADMINJS__/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    
+    <include file="Public:left" />
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <include file="Public:top" />
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+        <!-- page start-->
+
+        <div class="row" style="min-height: 1100px;">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    资料修改
+                    </div>
+                    <form action="__URL__/updatedata" method="post">
+                        <div class="panel-body">
+                            <form role="form">
+                            	<div class="form-group">
+	                                <label for="repersonnumber">推荐人编号</label>
+	                                <input type="text" class="form-control" id="repersonnumber" value="<{$data[0]['repersonnumber']}>" name="repersonnumber" placeholder="这里是推荐人编号" readonly>
+	                            </div>
+                            	<div class="form-group">
+                                    <label for="usernumber">用户编号</label>
+                                    <input type="text" class="form-control" id="usernumber" value="<{$data[0]['usernumber']}>" name="usernumber" placeholder="这里是用户编号" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">用户名</label>
+                                    <input type="text" class="form-control" id="" value="<{$data[0]['username']}>" name="username" placeholder="这里是用户名" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">用户密码</label>
+                                    <input type="password" class="form-control" id="password" value="<{$data[0]['password']}>" name="password" placeholder="请输入您的密码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="okpassword">确认密码</label>
+                                    <input type="password" class="form-control" value="<{$data[0]['password']}>" id="okpassword" name="okpassword" placeholder="请再次输入密码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phonenumber">手机号码</label>
+                                    <input type="text" class="form-control" id="phonenumber" value="<{$data[0]['phonenumber']}>" name="phonenumber" placeholder="请输入您的手机号码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="qq">QQ号码</label>
+                                    <input type="text" class="form-control" id="qq" value="qq" name="qq" placeholder="请输入您的QQ号码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="weixin">微信号</label>
+                                    <input type="text" class="form-control" value="<{$data[0]['weixin']}>" id="weixin" name="weixin" placeholder="请输入您的微信号">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zhifubao">支付宝</label>
+                                    <input type="text" class="form-control" id="zhifubao" value="<{$data[0]['zhifubao']}>" name="zhifubao" placeholder="请输入您的支付宝">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">电子邮箱</label>
+                                    <input type="text" class="form-control" id="email" value="<{$data[0]['email']}>" name="email" placeholder="请输入您的电子邮箱">
+                                </div>
+                                <button type="submit" class="btn btn-primary">确认修改</button>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- page end-->
+        </section>
+        <!--body wrapper end-->
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="__ADMINJS__/jquery-2.2.1.min.js"></script>
+<script src="__ADMINJS__/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="__ADMINJS__/jquery-migrate-1.2.1.min.js"></script>
+<script src="__ADMINJS__/bootstrap.min.js"></script>
+<script src="__ADMINJS__/modernizr.min.js"></script>
+<script src="__ADMINJS__/jquery.nicescroll.js"></script>
+
+<!--common scripts for all pages-->
+<script src="__ADMINJS__/scripts.js"></script>
+
+<script>var url = "<{:U('Home/Index/weixin')}>";</script>
+<script src="__ADMINJS__/weixin.js"></script>
+
+</body>
+</html>

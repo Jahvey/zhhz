@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Anonymous" />
+    <meta name="keywords" content="众惠 互助 平台" />
+    <meta name="description" content="欢迎来到众惠互助平台！"/>
+    <meta property="og:title" content="众惠互助平台"/>
+    <meta property="og:description" content="欢迎来到众惠互助平台！"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+    <title>我的资料 - 众惠互助平台</title>
+
+    <link href="__ADMINCSS__/style.css" rel="stylesheet">
+    <link href="__ADMINCSS__/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="__ADMINJS__/html5shiv.js"></script>
+    <script src="__ADMINJS__/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+
+    <include file="Public:left" />
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <include file="Public:top" />
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                <div class="panel-heading">我的资料</div>
+                    <div class="panel-body">
+                        <div class="media usr-info">
+                            <div class="pull-left" style="text-align: center;">
+                                <img alt="" src="__ADMINIMAGES__/photos/user.png" class="thumb"><br><br>
+                                <span class="label label-warning label-mini">Lv.<{$mydata[0]['level']}></span>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><br><{$mydata[0]['username']}></h4>
+                                <h6>用户编号 <{$mydata[0]['usernumber']}></h6><h6><br> </h6>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>手机号码</p></td>
+                                        <td style="padding-right: 10px;"><p><{$mydata[0]['phonenumber']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>QQ号码</p></td>
+                                        <td style="padding-right: 10px;"><p><{$mydata[0]['qq']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>微信号</p></td>
+                                        <td style="padding-right: 10px;"><p><{$mydata[0]['weixin']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>支付宝</p></td>
+                                        <td style="padding-right: 10px;"><p><{$mydata[0]['zhifubao']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>电子邮箱</p></td>
+                                        <td style="padding-right: 10px;"><p><{$mydata[0]['email']}></p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                <div class="panel-heading">我的上级</div>
+                    <div class="panel-body">
+                        <div class="media usr-info">
+                            <div class="pull-left" style="text-align: center;">
+                                <img alt="" src="__ADMINIMAGES__/photos/user.png" class="thumb"><br><br>
+                                <span class="label label-warning label-mini">Lv.<{$upleveldata[0]['level']}></span>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><br><{$upleveldata[0]['username']}></h4>
+                                <h6>用户编号 <{$upleveldata[0]['usernumber']}></h6><h6><br> </h6>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>手机号码</p></td>
+                                        <td style="padding-right: 10px;"><p><{$upleveldata[0]['phonenumber']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>QQ号码</p></td>
+                                        <td style="padding-right: 10px;"><p><{$upleveldata[0]['qq']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>微信号</p></td>
+                                        <td style="padding-right: 10px;"><p><{$upleveldata[0]['weixin']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>支付宝</p></td>
+                                        <td style="padding-right: 10px;"><p><{$upleveldata[0]['zhifubao']}></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 10px;"><p>电子邮箱</p></td>
+                                        <td style="padding-right: 10px;"><p><{$upleveldata[0]['email']}></p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">下级资料</div>
+                    <div class="panel-body">
+                        <table class="table  table-hover general-table">
+                            <thead>
+                            <tr>
+                                <th>用户编号</th>
+                                <th>用户名</th>
+                                <th>所属层级</th>
+                                <th>等级</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="dwonLevelTotalInfo" item="vo" >
+                                 <if condition="$vo['html'] GT '--'">
+                                    <tr></tr>
+                                 <else/>
+                                  <tr>
+                                        <td><{$vo['usernumber']}></td>
+                                        <td><{$vo['username']}></td>
+                                        <td>
+                                            
+                                            <if condition="$vo['html'] == ''">
+                                                <span style="color:red;"><{$vo['html']|calfloor=###}>人层</span>
+                                            <elseif condition="$vo['html'] == '-'" />
+                                                <span style="color:blue;"><{$vo['html']|calfloor=###}>人层</span>
+                                            <elseif condition="$vo['html'] == '--'" />
+                                                <span style="color:green;"><{$vo['html']|calfloor=###}>人层</span>
+                                            <else/>
+                                            </if>
+
+                                        </td>
+                                        <td><span class="label label-warning label-mini">Lv.<{$vo['level']}></span></td>
+                                    </tr>
+                                 </if>
+                                </foreach>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!--body wrapper end-->
+
+        <!-- page end-->
+        </section>
+        <!--body wrapper end-->
+
+        
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="__ADMINJS__/jquery-2.2.1.min.js"></script>
+<script src="__ADMINJS__/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="__ADMINJS__/jquery-migrate-1.2.1.min.js"></script>
+<script src="__ADMINJS__/bootstrap.min.js"></script>
+<script src="__ADMINJS__/modernizr.min.js"></script>
+<script src="__ADMINJS__/jquery.nicescroll.js"></script>
+
+<!--common scripts for all pages-->
+<script src="__ADMINJS__/scripts.js"></script>
+
+<script>var url = "<{:U('Home/Index/weixin')}>";</script>
+<script src="__ADMINJS__/weixin.js"></script>
+
+</body>
+</html>

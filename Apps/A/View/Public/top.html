@@ -1,0 +1,33 @@
+<!-- header section start-->
+<div class="header-section">
+
+<!--toggle button start-->
+<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+<!--toggle button end-->
+
+
+
+<!--notification menu start -->
+<div class="menu-right">
+    <ul class="notification-menu">
+        <li>
+            <a href="<{:U('A/Uprecord/index')}>" class="btn btn-default dropdown-toggle info-number">
+                <i class="fa fa-bell-o"></i>
+                <if condition="$order neq 0 ">
+                    <span class="badge"><{$order}></span>  
+                </if>
+            </a>
+            
+        </li>
+        <li>
+            <a href="<{:U('A/Mydata/index')}>" class="btn btn-default dropdown-toggle">
+                <img src="__ADMINIMAGES__/photos/user.png" alt="" />
+                <{$Think.session.ausername}> <span class="label label-warning label-mini">Lv.<{$level}></span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--notification menu end -->
+
+</div>
+<!-- header section end-->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Anonymous" />
+    <meta name="keywords" content="众惠 互助 平台" />
+    <meta name="description" content="欢迎来到众惠互助平台！"/>
+    <meta property="og:title" content="众惠互助平台"/>
+    <meta property="og:description" content="欢迎来到众惠互助平台！"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+    <title>Ａ轮登录 - 众惠互助平台</title>
+
+    <link href="__ADMINCSS__/style.css" rel="stylesheet">
+    <link href="__ADMINCSS__/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="__ADMINJS__/html5shiv.js"></script>
+    <script src="__ADMINJS__/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="login-body" style="min-height: 700px;">
+
+<div class="container">
+
+    <form class="form-signin" method='post' action="<{:U('A/Login/fromLogin')}>">
+        <div class="form-signin-heading text-center">
+            <a href="__APP__">
+            <img src="__ADMINIMAGES__/invoice-logo.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="login-wrap">
+            <input type="text" class="form-control" name="username" placeholder="用户名"  autofocus>
+            <input type="password" class="form-control" name="password" placeholder="密码">
+            <button class="btn btn-lg btn-login btn-block" type="submit">
+                <i class="fa fa-check"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+<script src="__ADMINJS__/jquery-2.2.1.min.js"></script>
+<script src="__ADMINJS__/bootstrap.min.js"></script>
+<script src="__ADMINJS__/modernizr.min.js"></script>
+
+<!-- 
+<script>var url = "<{:U('Home/Index/weixin')}>";</script>
+<script src="__ADMINJS__/weixin.js"></script> -->
+
+</body>
+</html>

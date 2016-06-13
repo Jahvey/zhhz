@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Anonymous" />
+    <meta name="keywords" content="众惠 互助 平台" />
+    <meta name="description" content="欢迎来到众惠互助平台！"/>
+    <meta property="og:title" content="众惠互助平台"/>
+    <meta property="og:description" content="欢迎来到众惠互助平台！"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+    <title>Ｃ轮首页 - 众惠互助平台</title>
+
+    <link href="__ADMINCSS__/style.css" rel="stylesheet">
+    <link href="__ADMINCSS__/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="__ADMINJS__/html5shiv.js"></script>
+    <script src="__ADMINJS__/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+
+    <include file="Public:left" />
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <include file="Public:top" />
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+        <!-- page start-->
+
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">系统公告</div>
+                <div class="panel-body">
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">会员登陆信息</div>
+                <div class="panel-body">
+                    <i class="fa fa-th-list"></i> 
+                    账户激活时间：<{$Think.session.ccreatetime|date='Y-m-d H:s:i',###}>
+                    <br><br>
+                    <i class="fa fa-th-list"></i> 
+                    最近登陆时间：<{$Think.session.clasttime|date='Y-m-d H:s:i',###}>
+                    <br><br>
+                    <i class="fa fa-th-list"></i> 
+                    最近登陆IP地址：<{$Think.session.clastip}>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">升级付费信息</div>
+                <div class="panel-body">
+                    <i class="fa fa-th-list"></i> 
+                        当前等级：Lv.<{$level}>
+                    <br><br>
+                    <i class="fa fa-th-list"></i> 
+                        下一付费等级：
+                    <if condition="$level eq 3">
+                        游戏结束
+                    <else/>
+                        Lv.<{$level + 1}>
+                    </if>
+                    <br><br>
+                    <i class="fa fa-th-list"></i> 
+                        下一付费金额：
+                    <if condition="$level eq 3">
+                        结束游戏
+                    <else/>
+                        <{$shomoney}>元
+                    </if>
+                </div>
+            </div>
+            </div>
+        </div>
+       
+        <!--body wrapper end-->
+
+        <!-- page end-->
+        </section>
+        <!--body wrapper end-->
+        
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="__ADMINJS__/jquery-2.2.1.min.js"></script>
+<script src="__ADMINJS__/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="__ADMINJS__/jquery-migrate-1.2.1.min.js"></script>
+<script src="__ADMINJS__/bootstrap.min.js"></script>
+<script src="__ADMINJS__/modernizr.min.js"></script>
+<script src="__ADMINJS__/jquery.nicescroll.js"></script>
+
+<!--common scripts for all pages-->
+<script src="__ADMINJS__/scripts.js"></script>
+
+<script>var url = "<{:U('Home/Index/weixin')}>";</script>
+<script src="__ADMINJS__/weixin.js"></script>
+
+</body>
+</html>

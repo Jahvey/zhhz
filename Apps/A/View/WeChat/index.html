@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Longston" />
+    <meta name="keywords" content="微信 个性化 撤回 字符串生成" />
+    <meta name="description" content="微信个性化撤回字符串生成"/>
+    <meta property="og:title" content="微信个性化撤回字符串生成"/>
+    <meta property="og:description" content="微信个性化撤回字符串生成"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>微信个性化撤回字符串生成</title>
+    <style>
+        .body,input,textarea,button{
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        .forms{
+            padding: 20px;
+            position: relative;
+        }
+        .input{
+            width: 100%;
+            padding: 15px;
+            border:0;
+            color: #595757;
+            background: #efeff0;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .button{
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            color: #fff;
+            background: #8ec31f;
+            margin-bottom: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function output(){
+            var name = document.querySelector("input[name=name]").value;
+            var suffix = document.querySelector("input[name=suffix]").value;
+            var output = document.querySelector("#output");
+            output.value = String.fromCharCode(65197)+suffix +String.fromCharCode(65197) + name;
+            output.setSelectionRange(0, output.value.length);
+            return false;
+        }
+    </script>
+</head>
+<body>
+<div class="forms">
+    	<input class="input" name="name" type="text" placeholder="请输入您的姓名"/>
+        <input class="input" name="suffix" type="text" placeholder="请输入您想要的后缀"/>
+        <button class="button" name="submit" onclick="output();">生成网名</button>
+        <input onclick="this.setSelectionRange(0, this.value.length);" class="input" id="output"/>
+</div>
+</body>
+</html>
